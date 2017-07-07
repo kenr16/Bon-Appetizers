@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
 
   validates :description, :presence => true
   validates :description, :length => {
-    :minimum => 50,
+    :minimum => 20,
     :maximum => 250,
     :too_short => "%{count} characters is the minimum allowed for a product description.",
     :too_long => "%{count} characters is the maximum allowed for a product description."
