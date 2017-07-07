@@ -1,8 +1,12 @@
 class Product < ActiveRecord::Base
   include ActiveModel::Validations
   has_many :reviews
-  has_attached_file :image
-  
+  has_attached_file :image,
+                  styles: { thumb: ["100x100#", :jpg],
+                            original: ['600x600>', :jpg] },
+                  convert_options: { thumb: "-quality 75 -strip",
+                                     original: "-quality 100 -strip" }
+
   validates :name, :presence => true
   validates :name, :length => {
     :minimum => 3,
