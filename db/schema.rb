@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170707154127) do
     t.string "email"
     t.string "password_hash"
     t.string "password_salt"
-    t.boolean "admin"
+    t.boolean "admin", default: false, null: false
     t.string "name"
   end
 
