@@ -1,7 +1,8 @@
 class Product < ActiveRecord::Base
   include ActiveModel::Validations
   has_many :reviews
-
+  has_attached_file :image
+  
   validates :name, :presence => true
   validates :name, :length => {
     :minimum => 3,
@@ -21,5 +22,10 @@ class Product < ActiveRecord::Base
     :too_short => "%{count} characters is the minimum allowed for a product description.",
     :too_long => "%{count} characters is the maximum allowed for a product description."
   }
+
+  validates_attachment :image,
+                     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+
+
 
 end
