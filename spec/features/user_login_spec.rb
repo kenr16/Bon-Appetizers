@@ -48,4 +48,20 @@ describe "the add a user process" do
     expect(page).to have_content "user@email.com"
   end
 
+  it "fails logging in when an incorrect password is entered" do
+    visit products_path
+    click_link 'Sign up'
+    fill_in 'user_name', :with => 'User'
+    fill_in 'user_email', :with => 'user@email.com'
+    fill_in 'user_password', :with => 'helloyou'
+    fill_in 'user_password_confirmation', :with => 'helloyou'
+    click_on 'Sign Up'
+    click_link 'Sign out'
+    click_on 'Sign in'
+    fill_in 'email', :with => 'user@email.com'
+    fill_in 'password', :with => 'incorrect'
+    click_on 'Log in'
+    expect(page).to have_content "There was a problem signing in. Please try again."
+  end
+
 end

@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
   before_action :authorize_admin, only: [:new, :create, :edit, :update, :destroy]
 
+  def homepage
+    render :home
+    # This render will link to the specific html.erb document in the folder that matches the controller.
+  end
+
   def index
     @products = Product.all
     @user = current_user
