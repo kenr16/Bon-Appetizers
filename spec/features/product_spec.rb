@@ -54,6 +54,36 @@ describe "the product process" do
     expect(page).to have_content 'Product successfully edited!'
   end
 
+  it "fails to edits an existing product" do
+    visit products_path
+    click_link 'Sign up'
+    fill_in 'user_name', :with => 'User'
+    fill_in 'user_email', :with => 'user@email.com'
+    fill_in 'user_password', :with => 'helloyou'
+    fill_in 'user_password_confirmation', :with => 'helloyou'
+    click_on 'Sign Up'
+    expect(page).to have_content 'user@email.com'
+
+    visit "/users"
+    click_link 'User'
+    find('#user_admin').find(:xpath, 'option[1]').select_option
+    fill_in 'user_password', :with => 'helloyou'
+    fill_in 'user_password_confirmation', :with => 'helloyou'
+    click_on 'Edit User'
+
+    product = FactoryGirl.create(:product)
+    visit product_path(product)
+
+    click_on 'Edit Product'
+    fill_in 'product_name', :with => ''
+    fill_in 'product_category', :with => ''
+    fill_in 'product_description', :with => ''
+    click_on 'Update Product'
+    expect(page).to have_content 'Product edit failed!'
+  end
+
+
+
   it "deletes an existing product" do
     visit products_path
     click_link 'Sign up'
