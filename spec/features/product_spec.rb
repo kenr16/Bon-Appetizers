@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "the review process" do
-  it "adds a new review to an existant product" do
+describe "the product process" do
+  it "creates a new product" do
     visit products_path
     click_link 'Sign up'
     fill_in 'user_name', :with => 'User'
@@ -11,19 +11,24 @@ describe "the review process" do
     click_on 'Sign Up'
     expect(page).to have_content 'user@email.com'
 
-    product = FactoryGirl.create(:product)
-    visit product_path(product)
-    expect(page).to have_content 'Doritos'
-    click_on 'Add a review'
-    fill_in 'review_author', :with => 'User'
-    find('#review_rating').find(:xpath, 'option[2]').select_option
-    fill_in 'review_content', :with => 'Doritos are some of the finest imported delicacies I have ever tried!'
-    click_on 'Create Review'
-    expect(page).to have_content 'Review successfully added!'
+    visit "/users"
+    click_link 'User'
+    find('#user_admin').find(:xpath, 'option[1]').select_option
+    fill_in 'user_password', :with => 'helloyou'
+    fill_in 'user_password_confirmation', :with => 'helloyou'
+    click_on 'Edit User'
 
+    visit products_path
+    click_link 'New Product'
+    fill_in 'product_name', :with => 'Peaches'
+    fill_in 'product_price', :with => 1.95
+    fill_in 'product_category', :with => 'Fruit'
+    fill_in 'product_description', :with => 'Millions of peaches, peaches for me!  Millions of peaches, peaches for free.'
+    click_on 'Create Product'
+    expect(page).to have_content 'Product successfully added!'
   end
 
-  it "edits an existing review" do
+  it "edits an existing product" do
     visit products_path
     click_link 'Sign up'
     fill_in 'user_name', :with => 'User'
@@ -41,19 +46,15 @@ describe "the review process" do
     click_on 'Edit User'
 
     product = FactoryGirl.create(:product)
-    review = FactoryGirl.create(:review, :product_id => product.id)
-
     visit product_path(product)
 
-    click_link 'Edit'
-    fill_in 'review_author', :with => 'User'
-    find('#review_rating').find(:xpath, 'option[2]').select_option
-    fill_in 'review_content', :with => 'Doritos are some of the finest imported delicacies I have ever tried!'
-    click_on 'Update Review'
-    expect(page).to have_content 'Review successfully edited!'
+    click_on 'Edit Product'
+    fill_in 'product_price', :with => 2.99
+    click_on 'Update Product'
+    expect(page).to have_content 'Product successfully edited!'
   end
 
-  it "deletes an existing review" do
+  it "deletes an existing product" do
     visit products_path
     click_link 'Sign up'
     fill_in 'user_name', :with => 'User'
@@ -71,14 +72,13 @@ describe "the review process" do
     click_on 'Edit User'
 
     product = FactoryGirl.create(:product)
-    review = FactoryGirl.create(:review, :product_id => product.id)
-
     visit product_path(product)
 
-    click_link 'Delete'
-    expect(page).to have_content 'Review successfully deleted!'
-
+    click_on 'Delete Product'
+    expect(page).to have_content 'Product successfully deleted!'
   end
+
+
 
 
 end

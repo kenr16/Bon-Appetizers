@@ -39,14 +39,15 @@ describe "the make a user an admin process" do
     fill_in 'user_password_confirmation', :with => 'helloyou'
     click_on 'Sign Up'
     expect(page).to have_content 'user@email.com'
-    visit "users/"
-    click_on 'User'
-    find("option[value='true']").click
+
+    visit "/users"
+    click_link 'User'
+    find('#user_admin').find(:xpath, 'option[1]').select_option
     fill_in 'user_password', :with => 'helloyou'
     fill_in 'user_password_confirmation', :with => 'helloyou'
     click_on 'Edit User'
     visit products_path
-    # expect(page).to have_content 'New Product'
+    expect(page).to have_content 'New Product'
     # page.find_link('New Product').visible?
   end
 
