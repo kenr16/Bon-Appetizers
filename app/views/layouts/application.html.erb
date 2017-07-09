@@ -35,9 +35,22 @@
         </div>
 
         <div id="content">
+          
           <div id="minibackground">
           </div>
-          <%= yield %>
+
+          <div id="output">
+            <div id="outputyield">
+            </div>
+            </div>
+          </div>
+
+          <div id="parent">
+            <div id="wide"><%= yield %>Wide (rest of width)</div>
+            <div id="narrow"><div id="outputimage">Narrow (200px)</div>
+          </div>
+
+
         </div>
 
         <div id="footer">
