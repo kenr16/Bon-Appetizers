@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-08T15:49:50-07:00">2017-07-08T15:49:50-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-08T15:51:14-07:00">2017-07-08T15:51:14-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.42
+         2.41
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>505</b> relevant lines. 
-    <span class="green"><b>495</b> lines covered</span> and
+    <b>506</b> relevant lines. 
+    <span class="green"><b>496</b> lines covered</span> and
     <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -343,9 +343,9 @@
       <tr>
         <td class="strong"><a href="#3bc62544a22ebe1bd7c776f5be40a5be9410a4b3" class="src_link" title="spec/features/product_spec.rb">spec/features/product_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>114</td>
-        <td>88</td>
-        <td>88</td>
+        <td>115</td>
+        <td>89</td>
+        <td>89</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -556,8 +556,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="224" data-linenumber="6">
-          <span class="hits">224</span>
+        <li class="covered" data-hits="225" data-linenumber="6">
+          <span class="hits">225</span>
           
           <code class="ruby">    if session[:user_id]</code>
         </li>
@@ -4216,8 +4216,8 @@
     <h3>spec/features/product_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>88</b> relevant lines. 
-      <span class="green"><b>88</b> lines covered</span> and
+      <b>89</b> relevant lines. 
+      <span class="green"><b>89</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4570,163 +4570,163 @@
         <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit products_path</code>
+          <code class="ruby">    visit &quot;/&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;Sign up&#39;</code>
+          <code class="ruby">    visit products_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_name&#39;, :with =&gt; &#39;User&#39;</code>
+          <code class="ruby">    click_link &#39;Sign up&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_email&#39;, :with =&gt; &#39;user@email.com&#39;</code>
+          <code class="ruby">    fill_in &#39;user_name&#39;, :with =&gt; &#39;User&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_email&#39;, :with =&gt; &#39;user@email.com&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Sign Up&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
+          <code class="ruby">    click_on &#39;Sign Up&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &#39;user@email.com&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/users&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;User&#39;</code>
+          <code class="ruby">    visit &quot;/users&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">    find(&#39;#user_admin&#39;).find(:xpath, &#39;option[1]&#39;).select_option</code>
+          <code class="ruby">    click_link &#39;User&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    find(&#39;#user_admin&#39;).find(:xpath, &#39;option[1]&#39;).select_option</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
+          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
           <code class="ruby">    click_on &#39;Edit User&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="74">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    product = FactoryGirl.create(:product)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="75">
           <span class="hits">1</span>
           
+          <code class="ruby">    product = FactoryGirl.create(:product)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
           <code class="ruby">    visit product_path(product)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_on &#39;Edit Product&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;product_name&#39;, :with =&gt; &#39;&#39;</code>
+          <code class="ruby">    click_on &#39;Edit Product&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;product_category&#39;, :with =&gt; &#39;&#39;</code>
+          <code class="ruby">    fill_in &#39;product_name&#39;, :with =&gt; &#39;&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;product_description&#39;, :with =&gt; &#39;&#39;</code>
+          <code class="ruby">    fill_in &#39;product_category&#39;, :with =&gt; &#39;&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Update Product&#39;</code>
+          <code class="ruby">    fill_in &#39;product_description&#39;, :with =&gt; &#39;&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content &#39;Product edit failed!&#39;</code>
+          <code class="ruby">    click_on &#39;Update Product&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    expect(page).to have_content &#39;Product edit failed!&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
@@ -4741,148 +4741,148 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="87">
           
-          <code class="ruby">  it &quot;deletes an existing product&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit products_path</code>
+          <code class="ruby">  it &quot;deletes an existing product&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;Sign up&#39;</code>
+          <code class="ruby">    visit products_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_name&#39;, :with =&gt; &#39;User&#39;</code>
+          <code class="ruby">    click_link &#39;Sign up&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_email&#39;, :with =&gt; &#39;user@email.com&#39;</code>
+          <code class="ruby">    fill_in &#39;user_name&#39;, :with =&gt; &#39;User&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_email&#39;, :with =&gt; &#39;user@email.com&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;Sign Up&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
+          <code class="ruby">    click_on &#39;Sign Up&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &#39;user@email.com&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="97">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="97">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/users&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;User&#39;</code>
+          <code class="ruby">    visit &quot;/users&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">    find(&#39;#user_admin&#39;).find(:xpath, &#39;option[1]&#39;).select_option</code>
+          <code class="ruby">    click_link &#39;User&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    find(&#39;#user_admin&#39;).find(:xpath, &#39;option[1]&#39;).select_option</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+          <code class="ruby">    fill_in &#39;user_password&#39;, :with =&gt; &#39;helloyou&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
+          <code class="ruby">    fill_in &#39;user_password_confirmation&#39;, :with =&gt; &#39;helloyou&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="103">
+          <span class="hits">1</span>
+          
           <code class="ruby">    click_on &#39;Edit User&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="103">
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="104">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    product = FactoryGirl.create(:product)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="105">
           <span class="hits">1</span>
           
+          <code class="ruby">    product = FactoryGirl.create(:product)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
           <code class="ruby">    visit product_path(product)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="107">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="107">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_on &#39;Delete Product&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content &#39;Product successfully deleted!&#39;</code>
+          <code class="ruby">    click_on &#39;Delete Product&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    expect(page).to have_content &#39;Product successfully deleted!&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="111">
@@ -4904,6 +4904,12 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
           
           
           <code class="ruby">end</code>
