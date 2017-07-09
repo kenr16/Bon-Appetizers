@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
   </head>
 
   <body>
@@ -14,23 +15,28 @@
         <div id="sidebar">
 
           <div id="sidebardiv">
-            <%= image_tag("cater.png", :alt => "rss feed") %>
-            <%= link_to "Home", "/" %><br>
-            <%= link_to "Services", "/products"%>
+            <%= image_tag("cater.png", :alt => "rss feed") %><br><hr>
+            <%= link_to "Home", "/" %><br><hr>
+            <%= link_to "Services", "/products"%><br><hr>
+            <%= link_to "Users", "/users"%><br><hr>
           </div>
           <%= flash[:alert] %>
           <%= flash[:notice] %>
         </div>
 
+
         <div id="header">
-          <h1>Bon Appetizers Catering Services</h1>
+
         </div>
 
         <div id="background">
-
+          <h1>Bon Appetizers</h1>
+          <h1>Catering Services</h1>
         </div>
 
         <div id="content">
+          <div id="minibackground">
+          </div>
           <%= yield %>
         </div>
 
