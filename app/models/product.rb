@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
-  include ActiveModel::Validations
   has_many :reviews
+  has_many :associations
+  has_many :tags, through: :associations
+
   has_attached_file :image,
                   styles: { thumb: ["100x100#", :jpg],
                             original: ['600x600>', :jpg] },
