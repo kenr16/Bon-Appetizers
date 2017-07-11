@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :products do
     resources :reviews
+    resources :tags
   end
 
   # post '/users' => 'users#create'

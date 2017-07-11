@@ -49,3 +49,44 @@
                         :data => {:confirm => "You sure?",
                         :method => "delete"} %></p>
 <% end %>
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if @product.tags.any? %>
+  <h4>Here are the tags for this product:</h4>
+
+  <ul>
+    <% @product.tags.each do |tag| %>
+      <li>
+        <%= tag.name %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for [@product, @tag] do |f| %>
+
+  <div class="form-group">
+    <%= f.label "Add a tag!" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit  %>
+<% end %>
