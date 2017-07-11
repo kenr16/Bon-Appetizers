@@ -2,6 +2,7 @@
 
 <ul>
   <% @products.each do |product| %>
+    <%= image_tag(product.image.url(:thumb), class: 'media-object round') %>
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>

@@ -54,33 +54,19 @@
 <hr>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <% if @product.tags.any? %>
   <h4>Here are the tags for this product:</h4>
 
   <ul>
     <% @product.tags.each do |tag| %>
       <li>
-        <%= tag.name %>
+        <h2><%= tag.name %></h2>
       </li>
     <% end %>
   </ul>
 <% end %>
 
-
+<div class="pushdown">
 <%= form_for [@product, @tag] do |f| %>
 
   <div class="form-group">
@@ -90,3 +76,4 @@
 
   <%= f.submit  %>
 <% end %>
+</div>
